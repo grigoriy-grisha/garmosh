@@ -7,6 +7,9 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://darya-garmash.ru'),
+  icons: {
+    icon: '/favicon.ico',
+  },
   title: 'Дарья Гармаш — контент‑мейкер для beauty, врачей и клиник',
   description: 'Разработка, съёмка и монтаж Reels для вашего блога, которые поднимут вашу узнаваемость и продажи. Reels‑мейкер, который продюсирует и отвечает за результат.',
   openGraph: {
