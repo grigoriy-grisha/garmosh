@@ -1,0 +1,18 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-brand-high);
+  color: var(--text-brand-default);
+}
+
+.badgeNeutral {
+  background: var(--surface-neutral-black-med);
+  color: var(--text-neutral-black-default);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+

@@ -1,0 +1,71 @@
+.card {
+  padding: 1rem;
+  background: var(--surface-neutral-white-default);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 21.875rem;
+}
+
+.cardWithImage {
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10.25rem;
+  height: 10.25rem;
+  object-fit: cover;
+}
+
+.number {
+  display: block;
+  line-height: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+  color: var(--text-neutral-black-secondary);
+}
+
+@media (max-width: 1024px) {
+  .cardWithImage {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 15rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardWithImage .image {
+    position: static;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}

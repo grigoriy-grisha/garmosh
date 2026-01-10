@@ -1,0 +1,53 @@
+:root {
+  --p-brand-default: #ff4d00;
+  --p-brand-hover: #d64100;
+  
+  --p-neutral-black: #1d1c1a;
+  --p-neutral-white: #ffffff;
+  
+  --p-bg-default: #f2f2f2;
+  
+  --p-black-a68: rgba(29, 28, 26, 0.68);
+  --p-black-a32: rgba(29, 28, 26, 0.32);
+  --p-black-a12: rgba(29, 28, 26, 0.12);
+  --p-black-a08: rgba(29, 28, 26, 0.08);
+  --p-black-a06: rgba(29, 28, 26, 0.06);
+  
+  --p-white-a68: rgba(255, 255, 255, 0.68);
+  --p-white-a32: rgba(255, 255, 255, 0.32);
+  --p-white-a12: rgba(255, 255, 255, 0.12);
+  --p-white-a08: rgba(255, 255, 255, 0.08);
+  --p-white-a06: rgba(255, 255, 255, 0.06);
+
+  --p-brand-a20: rgba(255, 77, 0, 0.2);
+  
+  --text-brand-default: var(--p-brand-default);
+  --text-brand-hover: var(--p-brand-hover);
+  
+  --text-neutral-black-default: var(--p-neutral-black);
+  --text-neutral-black-secondary: var(--p-black-a68);
+  --text-neutral-black-disabled: var(--p-black-a32);
+  
+  --text-neutral-white-default: var(--p-neutral-white);
+  --text-neutral-white-secondary: var(--p-white-a68);
+  --text-neutral-white-disabled: var(--p-white-a32);
+  
+  --border-neutral-black-med: var(--p-black-a12);
+  
+  --surface-brand-default: var(--p-brand-default);
+  --surface-brand-hover: var(--p-brand-hover);
+
+  --surface-brand-high: var(--p-brand-a20);
+  
+  --surface-neutral-black-default: var(--p-neutral-black);
+  --surface-neutral-black-high: var(--p-black-a12);
+  --surface-neutral-black-med: var(--p-black-a08);
+  --surface-neutral-black-low: var(--p-black-a06);
+  
+  --surface-neutral-white-default: var(--p-neutral-white);
+  --surface-neutral-white-high: var(--p-white-a12);
+  --surface-neutral-white-med: var(--p-white-a08);
+  --surface-neutral-white-low: var(--p-white-a06);
+  
+  --bg-default: var(--p-bg-default);
+  }

@@ -8,12 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^12.23.26",
     "next": "16.1.1",
+    "ogl": "^1.0.11",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.19.27",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5"

@@ -1,0 +1,140 @@
+:root {
+  --font-sans: var(--font-sans);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-extrabold: 800;
+
+  --ls-tight-1: -0.01em; /* -1% */
+  --ls-tight-3: -0.03em; /* -3% */
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.t-display-92 {
+  font-size: 5.75rem; /* 92px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-3);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+
+.t-display-64 {
+  font-size: 4rem; /* 64px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-3);
+  font-weight: var(--fw-semibold);
+}
+
+.t-display-50 {
+  font-size: 3.125rem; /* 50px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-3);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+
+.t-display-40-semi {
+  font-size: 2.5rem; /* 40px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-3);
+  font-weight: var(--fw-semibold);
+}
+
+.t-display-40-upper {
+  font-size: 2.5rem; /* 40px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+
+.t-display-32 {
+  font-size: 2rem; /* 32px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-3);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+
+.t-heading-24 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 108.333%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-semibold);
+}
+
+.t-title-20 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 120%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-regular);
+}
+
+.t-title-20-medium {
+  font-size: 1.25rem; /* 20px */
+  line-height: 120%; 
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-medium);
+}
+
+.t-title-20-semi {
+  font-size: 1.25rem; /* 20px */
+  line-height: 120%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-semibold);
+}
+
+.t-title-20-upper {
+  font-size: 1.25rem; /* 20px */
+  line-height: 120%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+
+.t-body-18 {
+  font-size: 1.125rem; /* 18px */
+  line-height: 133.333%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-regular);
+}
+
+.t-body-18-medium {
+  font-size: 1.125rem; /* 18px */
+  line-height: 133.333%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-medium);
+}
+
+.t-body-16 {
+  font-size: 1rem; /* 16px */
+  line-height: 137.5%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-regular);
+}
+
+.t-body-16-medium {
+  font-size: 1rem; /* 16px */
+  line-height: 137.5%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-medium);
+}
+
+.t-body-16-strong {
+  font-size: 1rem; /* 16px */
+  line-height: 137.5%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-semibold);
+}
+
+.t-caption-14 {
+  font-size: 0.875rem; /* 14px */
+  line-height: 100%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-medium);
+}
+

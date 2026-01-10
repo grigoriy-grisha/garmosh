@@ -1,0 +1,168 @@
+.card {
+  background: var(--surface-neutral-white-default);
+  padding: 1rem;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.profileText {
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.usernameLink {
+  color: var(--text-neutral-black-secondary);
+  text-decoration: none;
+  transition: color 150ms ease;
+  font-size: 1rem;
+  line-height: 137.5%;
+  letter-spacing: var(--ls-tight-1);
+  font-weight: var(--fw-regular);
+}
+
+.usernameLink:hover {
+  color: var(--text-brand-default);
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.informationDesktop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.informationMobile {
+  display: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 20rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-neutral-black-med);
+  color: var(--text-neutral-black-disabled);
+  width: fit-content;
+}
+
+.pillResult {
+  background: var(--surface-neutral-black-default);
+  color: var(--text-neutral-white-default);
+  border: none;
+}
+
+.tablist {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-neutral-black-med);
+  color: var(--text-neutral-black-secondary);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  width: fit-content;
+  transition: border-color 200ms ease, color 200ms ease, background-color 200ms ease;
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--text-brand-default);
+  outline-offset: 2px;
+}
+
+.tabActive {
+  background: var(--surface-neutral-black-default);
+  color: var(--text-neutral-white-default);
+  border: none;
+}
+
+.tabpanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.action {
+  margin-top: auto;
+}
+
+@media (max-width: 1400px) {
+  .informationDesktop {
+    display: none;
+  }
+
+  .informationMobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 920px) {
+  .card {
+    min-height: 32rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
