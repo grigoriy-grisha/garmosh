@@ -32,6 +32,7 @@ export default function Hero() {
               priority
               quality={75}
               sizes="100vw"
+              unoptimized
               className={styles.imageMobile}
             />
           </div>
@@ -50,6 +51,7 @@ export default function Hero() {
             priority
             quality={75}
             sizes="(max-width: 768px) 100vw, (max-width: 1920px) 681px, 1362px"
+            unoptimized
             className={styles.image}
           />
         </div>
