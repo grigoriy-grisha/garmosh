@@ -18,6 +18,17 @@ services:
     networks:
       - app-network
 
+  docker-proxy:
+    image: docker:27-dind
+    container_name: docker-proxy
+    restart: always
+    privileged: true
+    command: ["socat", "-v", "TCP-LISTEN:2375,fork,reuseaddr", "UNIX-CONNECT:/var/run/docker.sock"]
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - app-network
+
   traefik:
     image: "traefik:v1.7"
     container_name: "traefik"
@@ -28,6 +39,7 @@ services:
       - "--docker=true"
       - "--docker.exposedbydefault=false"
       - "--docker.watch=true"
+      - "--docker.endpoint=tcp://docker-proxy:2375"
       - "--entrypoints=Name:http Address::80 Redirect.EntryPoint:https"
       - "--entrypoints=Name:https Address::443 TLS"
       - "--acme.email=${EMAIL}"
@@ -42,7 +54,6 @@ services:
       - "443:443"
       - "8080:8080"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./letsencrypt:/letsencrypt"
     networks:
       - app-network
