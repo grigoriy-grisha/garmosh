@@ -32,8 +32,9 @@ services:
       - "--entrypoints=Name:https Address::443 TLS"
       - "--acme.email=${EMAIL}"
       - "--acme.storage=/letsencrypt/acme.json"
-      - "--acme.entrypoint=http"
+      - "--acme.entrypoint=https"
       - "--acme.httpchallenge=true"
+      - "--acme.httpchallenge.entrypoint=http"
       - "--acme.onhostrule=true"
       - "--logLevel=DEBUG"
     ports:
