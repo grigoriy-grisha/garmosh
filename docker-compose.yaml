@@ -26,7 +26,7 @@ services:
       - app-network
 
   traefik:
-    image: "traefik:v2.10"
+    image: "traefik:v2.4"  # Изменено на более старую версию
     container_name: "traefik"
     command:
       - "--log.level=DEBUG"
@@ -34,15 +34,11 @@ services:
       - "--api.dashboard=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.endpoint=unix:///var/run/docker.sock"
-      - "--providers.docker.apiVersion=1.40"  # ДОБАВЛЕНО
       - "--entrypoints.websecure.address=:443"
       - "--entryPoints.web.address=:80"
       - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.httpchallenge=true"  # ДОБАВЛЕНО для HTTP-01 challenge
-      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"  # ДОБАВЛЕНО
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.dashboard.rule=Host(`traefik.${HOST}`)"
