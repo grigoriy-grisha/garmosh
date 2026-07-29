@@ -27,6 +27,7 @@ services:
     image: "traefik:v3.0"
     container_name: "traefik"
     restart: always
+    network_mode: "host"  # <--- Добавлено
     command:
       - "--log.level=INFO"
       - "--api.dashboard=true"
@@ -47,15 +48,11 @@ services:
       - "traefik.http.routers.dashboard.middlewares=auth"
       - "traefik.http.routers.dashboard.tls.certresolver=myresolver"
       - "traefik.http.middlewares.auth.basicauth.usersfile=/etc/traefik/usersfile"
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - "./usersfile:/etc/traefik/usersfile:ro"
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    networks:
-      - app-network
+    # Удалите секцию ports
 
 networks:
   app-network:
