@@ -1,5 +1,3 @@
-version: '3.3'
-
 services:
   app:
     container_name: app
@@ -26,10 +24,9 @@ services:
       - app-network
 
   traefik:
-    image: "traefik:v2.10"
+    image: "traefik:v3.6"
     container_name: "traefik"
-    environment:
-      - DOCKER_API_VERSION=1.41
+    restart: always
     command:
       - "--log.level=DEBUG"
       - "--api.insecure=true"
@@ -37,7 +34,7 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
-      - "--entryPoints.web.address=:80"
+      - "--entrypoints.web.address=:80"
       - "--certificatesresolvers.myresolver.acme.email=${EMAIL}"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
